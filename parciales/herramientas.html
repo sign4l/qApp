@@ -1,0 +1,36 @@
+<h1><i class="fa fa-wrench"></i> Herramientas</h1>
+<hr>
+
+<div class="row" align="right">
+	<a href="#!/herramienta/nuevo" class="btn btn-warning">
+	<i class="fa fa-plus"></i>
+	Agregar Herramienta
+	</a>
+	<br><br>
+</div>
+
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Descripción</th>
+			<th>Máquina</th>
+			<th>Modificar</th>
+		</tr>
+		<tr ng-repeat="alumno in alumnos | limitTo:posicion | limitTo:-15">
+			<td> {{ alumno.id }}</td>
+			<td> {{ alumno.nombre }}</td>
+			<td> {{ alumno.descripcion }}</td>
+			<td> {{ alumno.maquina }}</td>
+			<td><a href="#!/herramienta/{{ alumno.codigo }}">Modificar</a></td>
+		</tr>
+	</table>
+
+	<br>
+	<button class="btn btn-primary" ng-click="anteriores()"><i class="fa fa-chevron-left" aria-hidden="true"></i> Anteriores</button>
+	<button class="btn btn-primary" ng-click="siguientes()"></i>Siguientes <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
+</div>
+
+

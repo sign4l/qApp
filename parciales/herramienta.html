@@ -1,0 +1,38 @@
+<h1><i class="fa fa-wrench"></i> Herramienta</h1>
+<h4>{{alumno.nombre}} en {{alumno.maquina}}</h4>
+<hr>
+
+<div class="row">
+	<form ng-submit="guardarAlumno()">
+
+	<div ng-hide="creando">
+		Código:
+		<br>
+		<input type="text" class="form-control" ng-model="alumno.codigo" readonly="readonly"><br>
+	</div>
+
+		Nombre:
+		<br>
+		<input type="text" class="form-control" ng-model="alumno.nombre" required placeholder="Nombre"><br>
+
+		ID:
+		<br>
+		<input type="text" class="form-control" ng-model="alumno.id" required><br>
+
+		Máquina:
+		<br>
+		<input type="text" class="form-control" ng-model="alumno.maquina" required placeholder="Máquina 1 / 2 / 3"><br>
+
+		Descripción:
+		<br>
+		<textarea type="text" class="form-control" ng-model="alumno.descripcion" rows="3" placeholder="Descripción"></textarea>
+		<br>
+
+		<button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar Cambios</button>
+
+		<br><br>
+
+		<p class="text-success animated fadeIn fast" ng-show="actualizado">Resgistro Actualizado</p>
+
+	</form>
+</div>
